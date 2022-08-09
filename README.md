@@ -31,56 +31,56 @@ I tried to implement almost all the features that were mentioned in the [assignm
 
 ### Data Importing:
 
-- [ ] Import data from the CSV files to a database or in-memory storage
-- [ ] Validate data before importing
-- [ ] Don't import journeys that lasted for less than ten seconds
-- [ ] Don't import journeys that covered distances shorter than 10 meters
+- [x] Import data from the CSV files to a database or in-memory storage
+- [x] Validate data before importing
+- [x] Don't import journeys that lasted for less than ten seconds
+- [x] Don't import journeys that covered distances shorter than 10 meters
 
 ### Journey List View:
 
-- [ ] List journeys. If you don't implement pagination, use some hard-coded limit for the list length because showing several million rows would make any browser choke
+- [x] List journeys. If you don't implement pagination, use some hard-coded limit for the list length because showing several million rows would make any browser choke
 
-- [ ] For each journey show departure and return stations, covered distance in kilometers and duration in minutes
+- [x] For each journey show departure and return stations, covered distance in kilometers and duration in minutes
 
   **Extras:**
 
-  - [ ] Pagination
+  - [x] Pagination
 
-  - [ ] Ordering per column
+  - [x] Ordering per column
 
-  - [ ] Searching
+  - [x] Searching
 
-  - [ ] Filtering
+  - [x] Filtering
 
 ### Station List View:
 
-- [ ] List all the stations
+- [x] List all the stations
 
   **Extras:**
 
-  - [ ] Pagination
-  - [ ] Searching
+  - [x] Pagination
+  - [x] Searching
 
 ### Single Station View:
 
-- [ ] Station name
-- [ ] Station address
-- [ ] Total number of journeys starting from the station
-- [ ] Total number of journeys ending at the station
+- [x] Station name
+- [x] Station address
+- [x] Total number of journeys starting from the station
+- [x] Total number of journeys ending at the station
 
   **Extras:**
 
-  - [ ] Station location on the map
-  - [ ] The average distance of a journey starting from the station
-  - [ ] The average distance of a journey ending at the station
-  - [ ] Top 5 most popular return stations for journeys starting from the station
-  - [ ] Top 5 most popular departure stations for journeys ending at the station
-  - [ ] Ability to filter all the calculations per month
+  - [x] Station location on the map
+  - [x] The average distance of a journey starting from the station
+  - [x] The average distance of a journey ending at the station
+  - [x] Top 5 most popular return stations for journeys starting from the station
+  - [x] Top 5 most popular departure stations for journeys ending at the station
+  - [x] Ability to filter all the calculations per month
 
 ### Additional "Surprise Us With" Features:
 
-- [ ] Endpoints to store new journeys data or new bicycle stations
+- [x] Endpoints to store new journeys data or new bicycle stations
 - [ ] Running backend in Docker
-- [ ] Running backend in Cloud
+- [x] Running backend in Cloud
 - [ ] Implement E2E tests
-- [ ] Create UI for adding journeys or bicycle stations
+- [x] Create UI for adding journeys or bicycle stations
