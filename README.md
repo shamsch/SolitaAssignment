@@ -75,10 +75,14 @@ I tried to implement almost all the features that were mentioned in the [assignm
 
 - [x] List all the stations
 
+  - Implemented in both the frontend and the backend.
+
   **Extras:**
 
   - [x] Pagination
+    - Implementation is the same as for the journey list view.
   - [x] Searching
+    - Implementation is the same as for the journey list view except for the search is done against the station name.
 
 ### Single Station View:
 
