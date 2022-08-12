@@ -84,7 +84,7 @@ I tried to implement almost all the features that were mentioned in the [assignm
 ### Additional "Surprise Us With" Features:
 
 - [x] Endpoints to store new journeys data or new bicycle stations
-- [ ] Running backend in Docker
+- [x] Running backend in Docker
 - [x] Running backend in Cloud
 - [ ] Implement E2E tests
 - [x] Create UI for adding journeys or bicycle stations
