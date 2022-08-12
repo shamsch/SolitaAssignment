@@ -116,7 +116,7 @@ I tried to implement almost all the features that were mentioned in the [assignm
 - [x] Endpoints to store new journeys data or new bicycle stations
   - Backend has an POST endpoint to store new journeys data with `api/journeys/add` endpoint. Frontend has a form that can be used to store new journeys data.
 - [x] Running backend in Docker
-  - Backend can be run inside a Docker container. Checkout to `docker` branch on the backend repository. Run `docker-compose up` to start the Docker container. Server will be available on `http://localhost:3000`.
+  - Backend can be run inside a Docker container. Run `docker-compose up` to start the Docker container. Server will be available on `http://localhost:3001`. Spin up the frontend from `docker-version` branch instead of `main` branch to connect to the backend running in the Docker container. 
 - [x] Running backend in Cloud
   - Backend runs on Heroku. Also the database is hosted on AWS RDS. The frontend is hosted with Netlify.
 - [ ] Implement E2E tests
