@@ -36,25 +36,40 @@ I tried to implement almost all the features that were mentioned in the [assignm
 ### Data Importing:
 
 - [x] Import data from the CSV files to a database or in-memory storage
+  - Imported into a PostgreSQL database hosted on AWS RDS Free tier and in a Docker container if you are using Docker locally to run the backend.
 - [x] Validate data before importing
+  - Data is validated before importing to the database with a Python script (also a Jupyter Notebook which was initially used) that can be found in the backend repository.
 - [x] Don't import journeys that lasted for less than ten seconds
+  - Done in `data/validate.ipynb` or `data/script/download_and_validate_data.py` in Docker branch.
 - [x] Don't import journeys that covered distances shorter than 10 meters
+  - Same as above.
 
 ### Journey List View:
 
 - [x] List journeys. If you don't implement pagination, use some hard-coded limit for the list length because showing several million rows would make any browser choke
 
+  - Pagination is implemented in both the frontend and the backend.
+
 - [x] For each journey show departure and return stations, covered distance in kilometers and duration in minutes
+
+  - Implemented in both the frontend and the backend.
 
   **Extras:**
 
   - [x] Pagination
 
+    - Backend can be paginated with `?page=<page_number>` parameter on `api/journeys` endpoint. Frontend has a pagination bar that can be used to navigate between pages in the bottom of the page.
+
   - [x] Ordering per column
+
+    - Backend can be ordered by any column with `?order_by=<column_name>` parameter on `api/journeys` endpoint. Frontend has a dropdown menu that can be used to order the list by any column. You can also set the order direction by adding `?orderDir=<order_direction>` parameter. Read more in the [API Docs.](https://github.com/shamsch/city-bike-app-backend/blob/main/README.md)
 
   - [x] Searching
 
+    - Backend can be searched by any month, departure station or return station name with `?search=<search_term>` parameter on `api/journeys` endpoint. Frontend has a search bar that can be used to search those said columns.
+
   - [x] Filtering
+    - Backend has multiple filer like maxDistance, maxDuration, minDistance, minDuration. Read more in the [API Docs.](https://github.com/shamsch/city-bike-app-backend/blob/main/README.md). Frontend has those filters implemented visually with a slider.
 
 ### Station List View:
 
@@ -68,26 +83,41 @@ I tried to implement almost all the features that were mentioned in the [assignm
 ### Single Station View:
 
 - [x] Station name
+  - Station name is shown in the single station request on both the frontend and the backend.
 - [x] Station address
+  - Same as above.
 - [x] Total number of journeys starting from the station
+  - Same as above.
 - [x] Total number of journeys ending at the station
+
+  - Same as above.
 
   **Extras:**
 
   - [x] Station location on the map
+    - Backend sends a `static_map_url` property to the frontend with the URL to the static map image. Frontend show the map image and on click redirects to the a map service provider that can show the station location on the map.
   - [x] The average distance of a journey starting from the station
+    - Backend sends a `average_departure_distance` property to the frontend with the average distance of a journey starting from the station.
   - [x] The average distance of a journey ending at the station
+    - Backend sends a `average_return_distance` property to the frontend with the average distance of a journey ending at the station.
   - [x] Top 5 most popular return stations for journeys starting from the station
+    - Backend sends a `top_return_stations` property to the frontend with the top 5 most popular return stations for journeys starting from the station.
   - [x] Top 5 most popular departure stations for journeys ending at the station
+    - Backend sends a `top_departure_stations` property to the frontend with the top 5 most popular departure stations for journeys ending at the station.
   - [x] Ability to filter all the calculations per month
+    - Backend can be filtered by any month with `?month=<month>` parameter on `api/stations/<station_id>` endpoint. Frontend has a dropdown menu that can be used to filter the calculations per month.
 
 ### Additional "Surprise Us With" Features:
 
 - [x] Endpoints to store new journeys data or new bicycle stations
-- [ ] Running backend in Docker
+  - Backend has an POST endpoint to store new journeys data with `api/journeys/add` endpoint. Frontend has a form that can be used to store new journeys data.
+- [x] Running backend in Docker
+  - Backend can be run inside a Docker container. Checkout to `docker` branch on the backend repository. Run `docker-compose up` to start the Docker container. Server will be available on `http://localhost:3000`.
 - [x] Running backend in Cloud
+  - Backend runs on Heroku. Also the database is hosted on AWS RDS. The frontend is hosted with Netlify.
 - [ ] Implement E2E tests
 - [x] Create UI for adding journeys or bicycle stations
+  - Frontend has a form that can be used to add new journeys data or new bicycle stations.
 
 <hr/>
 
