@@ -17,6 +17,8 @@ Best regards, <br/>
 Shamsur Raza Chowdhury <br/>
 August 9th, 2022
 
+**HUOM! Because the app is hosted on free version of Heroku, it goes to sleep after a certain time, so when opening/sending request for the first time, it takes roughly another extra half a minute for it to spin up. Please wait while it does that.**
+
 <hr/>
 
 ### Front-end codebase: https://github.com/shamsch/city-bike-app-frontend
